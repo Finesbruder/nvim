@@ -10,9 +10,8 @@ if not vim.loop.fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-
--- vim.cmd([[:Neotree filesystem reveal]])
 local opts = {}
 
 require("custom-keys")
 require("lazy").setup("plugins")
+

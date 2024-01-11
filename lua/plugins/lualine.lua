@@ -4,12 +4,13 @@ return {
     require("lualine").setup({
       options = {
         theme = "catppuccin",
+        disabled_filetypes = { 'packer', 'neotree', 'neo-tree' },
       },
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
-        lualine_c = {}, -- { 'tabs', 'filetype' },
-        
+        lualine_c = {},
+  
         lualine_x = {},
         lualine_y = { 'buffers' },
         lualine_z = { 'location', 'progress' }
@@ -17,3 +18,51 @@ return {
     })
   end,
 }
+
+-- sections = {
+--   lualine_a = { 'mode' },
+--   lualine_b = { 'branch', 'diff', 'diagnostics' },
+--   lualine_c = {},
+  
+--   lualine_x = {},
+--   lualine_y = { 'buffers' },
+--   lualine_z = { 'location', 'progress' }
+-- },
+
+
+-- lualine_b = {
+--   'branch',
+--   'diff',
+--   {
+--     'diagnostics',
+--     source = { 'nvim' },
+--     sections = { 'error' },
+--     diagnostics_color = { error = { bg = colors.red, fg = colors.white } },
+--   },
+--   {
+--     'diagnostics',
+--     source = { 'nvim' },
+--     sections = { 'warn' },
+--     diagnostics_color = { warn = { bg = colors.orange, fg = colors.white } },
+--   },
+--   { 'filename', file_status = false, path = 1 },
+--   { modified, color = { bg = colors.red } },
+--   {
+--     '%w',
+--     cond = function()
+--       return vim.wo.previewwindow
+--     end,
+--   },
+--   {
+--     '%r',
+--     cond = function()
+--       return vim.bo.readonly
+--     end,
+--   },
+--   {
+--     '%q',
+--     cond = function()
+--       return vim.bo.buftype == 'quickfix'
+--     end,
+--   },
+-- },
