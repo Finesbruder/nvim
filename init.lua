@@ -14,4 +14,3 @@ local opts = {}
 
 require("custom-keys")
 require("lazy").setup("plugins")
-
