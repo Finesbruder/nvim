@@ -142,6 +142,17 @@ return {
   
             commands = {} -- Add a custom command or override a global one using the same function name
           },
+          default_component_configs = {
+            git_status = {
+              symbols = {
+                -- Change type
+                added     = "a", -- or "✚", but this is redundant info if you use git_status_colors on the name
+                modified  = "m", -- or "", but this is redundant info if you use git_status_colors on the name
+                deleted   = "x",-- this can only be used in the git_status source
+                renamed   = "r",-- this can only be used in the git_status source
+              },
+            },
+          },
         })
     end
 

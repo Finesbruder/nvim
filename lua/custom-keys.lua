@@ -5,3 +5,7 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
 vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
+vim.keymap.set("n", "<S-up>", ":resize +1<CR>", {})
+vim.keymap.set("n", "<S-down>", ":resize -1<CR>", {})
+vim.keymap.set("n", "<S-left>", ":vertical resize +1<CR>", {})
+vim.keymap.set("n", "<S-right>", ":vertical resize -1<CR>", {})
