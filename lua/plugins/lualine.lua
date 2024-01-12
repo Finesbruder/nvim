@@ -4,16 +4,16 @@ return {
     require("lualine").setup({
       options = {
         theme = "catppuccin",
-        disabled_filetypes = { 'packer', 'neotree', 'neo-tree' },
+        disabled_filetypes = { "packer", "neotree", "neo-tree" },
       },
       sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', 'diff', 'diagnostics' },
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = {},
-  
+
         lualine_x = {},
-        lualine_y = { 'buffers' },
-        lualine_z = { 'location', 'progress' }
+        lualine_y = { "buffers" },
+        lualine_z = { "location", "progress" },
       },
     })
   end,
@@ -23,12 +23,11 @@ return {
 --   lualine_a = { 'mode' },
 --   lualine_b = { 'branch', 'diff', 'diagnostics' },
 --   lualine_c = {},
-  
+
 --   lualine_x = {},
 --   lualine_y = { 'buffers' },
 --   lualine_z = { 'location', 'progress' }
 -- },
-
 
 -- lualine_b = {
 --   'branch',
