@@ -15,6 +15,17 @@ return {
         lualine_y = { "buffers" },
         lualine_z = { "location", "progress" },
       },
+      tabline = {
+        lualine_a = { "tabs" },
+      },
+      inactive_winbar = {
+        lualine_a = { "branch "},
+        lualine_b = {},
+        lualine_c = {"filename"},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
+      }
     })
   end,
 }

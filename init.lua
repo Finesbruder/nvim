@@ -12,5 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
-require("custom-keys")
+require("custom-settings")
 require("lazy").setup("plugins")
+require("custom-keys")
+-- Wünsche:
+-- gd in new tab bzw window
+-- formatter soll auch richtig formatieren
+-- dinge aus dem buffer löschen --> klappt: leader q
+-- aktuell selektierten buffer splitten --> klappt mit C-w s oder C-w v
+-- auf leader ch soll sich custom-keys öffnen
+-- in visual mode mehrere lines markieren und bewegen
