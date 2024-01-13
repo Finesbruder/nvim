@@ -5,6 +5,7 @@ return {
       options = {
         theme = "catppuccin",
         disabled_filetypes = { "packer", "neotree", "neo-tree" },
+        globalstatus = true,
       },
       sections = {
         lualine_a = { "mode" },

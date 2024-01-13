@@ -19,7 +19,5 @@ require("custom-keys")
 -- Wünsche:
 -- gd in new tab bzw window
 -- formatter soll auch richtig formatieren
--- dinge aus dem buffer löschen --> klappt: leader q
--- aktuell selektierten buffer splitten --> klappt mit C-w s oder C-w v
--- auf leader ch soll sich custom-keys öffnen
--- in visual mode mehrere lines markieren und bewegen
+-- auf leader ch soll sich custom-keys öffnen 
+-- Navigation durch File, durch alle Tab-Buffer und durch Windows 
