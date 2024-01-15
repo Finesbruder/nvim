@@ -21,7 +21,7 @@ vim.keymap.set("n", "<S-up>", ":resize +1<CR>", {})
 vim.keymap.set("n", "<S-down>", ":resize -1<CR>", {})
 vim.keymap.set("n", "<S-left>", ":vertical resize +1<CR>", {})
 vim.keymap.set("n", "<S-right>", ":vertical resize -1<CR>", {})
-vim.keymap.set("n", "<leader>d", ":bp<bar>sp<bar>bn<bar>bd!<CR>", {});
+vim.keymap.set("n", "<leader>d", ":bp<bar>sp<bar>bn<bar>bd<CR>", {});
 
 -- Code Insights
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -58,7 +58,15 @@ vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
 vim.keymap.set("i", "(", "()<left>", {})
 vim.keymap.set("i", "[", "[]<left>", {})
-vim.keymap.set("i", "{", "{}<left>", {})
+vim.keymap.set("i", "{", "{}<left><CR><up><ESC>$o", {})
 vim.keymap.set("i", "{;", "{};<left><left>", {})
 vim.keymap.set("i", "/*", "/**/<left><left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
+
+-- Wünsche:
+-- shortcut für quickfix jumps (:cc!n)
+-- gd in new tab bzw window
+-- formatter soll auch richtig formatieren
+-- auf leader ch soll sich custom-keys öffnen 
+-- Navigation durch File, durch alle Tab-Buffer und durch Windows 
+

@@ -16,8 +16,3 @@ local opts =  {}
 require("custom-settings")
 require("lazy").setup("plugins")
 require("custom-keys")
--- Wünsche:
--- gd in new tab bzw window
--- formatter soll auch richtig formatieren
--- auf leader ch soll sich custom-keys öffnen 
--- Navigation durch File, durch alle Tab-Buffer und durch Windows 
