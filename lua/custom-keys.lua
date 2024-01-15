@@ -26,8 +26,8 @@ vim.keymap.set("n", "<leader>d", ":bp<bar>sp<bar>bn<bar>bd<CR>", {});
 -- Code Insights
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 -- vim.keymap.set("n", "<leader>gd", "gd | :tabnew %<CR>", {}) funktioniert noch nicht ganz: öffnet nicht die definition
--- vim.keymap.set("n", "<C-j>", vim.lsp.buf.hover, {})
--- vim.keymap.set("i", "<C-j>", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "<C-j>", vim.lsp.buf.hover, {})
+vim.keymap.set("i", "<C-j>", vim.lsp.buf.hover, {})
 
 -- LSP Bindings
 vim.keymap.set("n", "<leader>ra", vim.lsp.buf.code_action, {})
@@ -39,7 +39,7 @@ vim.keymap.set("i", '<C-h>', vim.lsp.buf.signature_help, {}) -- ich weiß nicht 
 
 -- Save file
 vim.keymap.set('n', '<C-s>', ":w<CR>", {})
-vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>i", {})
+vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>", {})
 vim.keymap.set('n', '<leader><C-s>', ":saveas %:h\\", {})
 vim.keymap.set('i', '<leader><C-s>', ":saveas %:h\\", {})
 
@@ -58,7 +58,8 @@ vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
 vim.keymap.set("i", "(", "()<left>", {})
 vim.keymap.set("i", "[", "[]<left>", {})
-vim.keymap.set("i", "{", "{}<left><CR><up><ESC>$o", {})
+vim.keymap.set("i", "{<CR>", "{}<left><CR><up><ESC>$o", {})
+vim.keymap.set("i", "{<Space>", "{<space><space>}<left><left>", {})
 vim.keymap.set("i", "{;", "{};<left><left>", {})
 vim.keymap.set("i", "/*", "/**/<left><left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
