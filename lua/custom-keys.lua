@@ -1,8 +1,5 @@
 -- vim.keymap.set("v", "<S-tab>", "<ESC>:call setreg('+', expand('%:h') .. '\\')<CR>", {}) 
 vim.keymap.set("v", ':', "", {}) -- unbind : in v-mode
--- Mode Jumping
-vim.keymap.set("i", "jk", "<ESC>", {})
-vim.keymap.set("i", "kj", "<ESC>", {})
 
 -- Navigation
 vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
@@ -11,10 +8,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>w", {})
 vim.keymap.set("n", "<C-j>", "<C-w>W", {})
 vim.keymap.set("n", "<leader>g", ":Neotree reveal git_status<CR>", {})
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+-- center cursor 
+vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
+vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
 
-    -- center cursor 
-    vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
-    vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
 
 -- Window Options
 vim.keymap.set("n", "<S-up>", ":resize +1<CR>", {})
@@ -41,26 +38,26 @@ vim.keymap.set("i", '<C-h>', vim.lsp.buf.signature_help, {}) -- ich weiß nicht 
 vim.keymap.set('n', '<C-s>', ":w<CR>", {})
 vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>", {})
 vim.keymap.set('n', '<leader><C-s>', ":saveas %:h\\", {})
-vim.keymap.set('i', '<leader><C-s>', ":saveas %:h\\", {})
 
 -- Refactoring
-vim.keymap.set("v", '<C-s>', ":sort<CR>", {}) -- Brauche noch global rename
+vim.keymap.set("v", '<C-o>', ":sort<CR>", {}) -- Brauche noch global rename
 vim.keymap.set("n", "<A-down>", ":move +1<CR>", {})
 vim.keymap.set("n", "<A-up>", ":move -2<CR>", {})
 vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
 
     -- Deletes selected text, moves to new window, pastes and saves in cwd 
-vim.keymap.set("v", "<tab>", "d<bar>:vsplit<CR><bar>:e %:h\\tempfile.txt<CR><bar>p<bar>:saveas %:h\\", {})
+-- vim.keymap.set("v", "<tab>", "d<bar>:vsplit<CR><bar>:e %:h\\tempfile.txt<CR><bar>p<bar>:saveas %:h\\", {})
 
 -- Code Hilfe 
     -- Brackets
 vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
-vim.keymap.set("i", "(", "()<left>", {})
+-- vim.keymap.set("i", "(", "()<left>", {})
 vim.keymap.set("i", "[", "[]<left>", {})
 vim.keymap.set("i", "{<CR>", "{}<left><CR><up><ESC>$o", {})
-vim.keymap.set("i", "{<Space>", "{<space><space>}<left><left>", {})
+-- vim.keymap.set("i", "{<Space>", "{<space><space>}<left><left>", {})
 vim.keymap.set("i", "{;", "{};<left><left>", {})
+vim.keymap.set("i", "{", "{}<left>", {})
 vim.keymap.set("i", "/*", "/**/<left><left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
 

@@ -22,8 +22,8 @@ return {
         lazy = false,
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
             local lspconfig = require("lspconfig")
+            
             lspconfig.tsserver.setup({
               capabilities = capabilities
             })
@@ -33,6 +33,22 @@ return {
             lspconfig.lua_ls.setup({
               capabilities = capabilities
             })
+            -- lspconfig.rust_analyzer.setup({
+            --   capabilities = capabilities
+            -- })
+          --   lspconfig.rust_analyzer.setup({
+          --     capabilities = capabilities,
+          --     settings = {
+          --         ['rust-analyzer'] = {
+          --             check = {
+          --                 command = "clippy";
+          --             },
+          --             diagnostics = {
+          --                 enable = true;
+          --             }
+          --         }
+          --     }
+          -- })
         end
     }
 }

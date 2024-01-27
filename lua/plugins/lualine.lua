@@ -13,7 +13,7 @@ return {
         lualine_c = {},
 
         lualine_x = {},
-        lualine_y = { "buffers" },
+        lualine_y = { "filename" },
         lualine_z = { "location", "progress" },
       },
       tabline = {

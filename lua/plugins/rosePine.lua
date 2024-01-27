@@ -7,23 +7,19 @@ return {
             dark_variant = "main", -- main, moon, or dawn
             dim_inactive_windows = true,
             extend_background_behind_borders = false,
-        
             styles = {
                 bold = true,
                 italic = true,
                 transparency = false,
             },
-        
             groups = {
                 border = "muted",
                 link = "iris",
                 panel = "surface",
-        
                 error = "love",
                 hint = "iris",
                 info = "foam",
                 warn = "gold",
-        
                 git_add = "foam",
                 git_change = "rose",
                 git_delete = "love",
@@ -72,8 +68,9 @@ return {
             end,
         })
         
-        -- vim.cmd('colorscheme rose-pine')
-       --  vim.cmd('colorscheme rose-pine-main')
+  
+--     vim.cmd('colorscheme rose-pine')
+--    vim.cmd('colorscheme rose-pine-main')
          vim.cmd('colorscheme rose-pine-moon')
         -- vim.cmd('colorscheme rose-pine-dawn')
     end
