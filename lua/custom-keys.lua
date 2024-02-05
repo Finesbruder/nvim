@@ -1,13 +1,11 @@
 -- vim.keymap.set("v", "<S-tab>", "<ESC>:call setreg('+', expand('%:h') .. '\\')<CR>", {}) 
-vim.keymap.set("v", ':', "", {}) -- unbind : in v-mode
 
 -- Navigation
 vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
 vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
 vim.keymap.set("n", "<C-k>", "<C-w>w", {})
 vim.keymap.set("n", "<C-j>", "<C-w>W", {})
-vim.keymap.set("n", "<leader>g", ":Neotree reveal git_status<CR>", {})
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal<CR>", {})
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle<CR>", {})
 -- center cursor 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
@@ -68,9 +66,9 @@ vim.keymap.set("n", "<leader>xd", function() require("trouble").open("document_d
 vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
 vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
 vim.keymap.set("n", "gR", function() require("trouble").open("lsp_references") end)
+
+
 -- Wünsche:
--- gd in new tab bzw window
--- formatter soll auch richtig formatieren
--- auf leader ch soll sich custom-keys öffnen 
--- Navigation durch File, durch alle Tab-Buffer und durch Windows 
+-- gd in hover mit option auf öffnen
+-- diagnostics unter zeile und bessere markierung
 
