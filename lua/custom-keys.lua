@@ -7,7 +7,7 @@ vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
 vim.keymap.set("n", "<C-k>", "<C-w>w", {})
 vim.keymap.set("n", "<C-j>", "<C-w>W", {})
 vim.keymap.set("n", "<leader>g", ":Neotree reveal git_status<CR>", {})
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
+vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal<CR>", {})
 -- center cursor 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})

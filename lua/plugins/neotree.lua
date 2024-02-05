@@ -11,8 +11,37 @@ return {
         require("neo-tree").setup({
           close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
           popup_border_style = "rounded",
+          event_handlers = {
+            {
+              event = "file_opened",
+              handler = function(file_path)
+                -- auto close
+                -- vimc.cmd("Neotree close")
+                -- OR
+                require("neo-tree.command").execute({ action = "close" })
+                require("neo-tree.sources.filesystem").reset_search(state)
+
+              end
+            },
+            {
+              event = "neo_tree_window_after_open",
+              handler = function(args)
+                if args.position == "left" or args.position == "right" then
+                  vim.cmd("wincmd =")
+                end
+              end
+            },
+            {
+              event = "neo_tree_window_after_open",
+              handler = function(args)
+                if args.position == "left" or args.position == "right" then
+                  vim.cmd("wincmd =")
+                end
+              end
+            },
+          },
           window = {
-            position = "left",
+            position = "top",
             width = 30,
             mapping_options = {
               noremap = true,
