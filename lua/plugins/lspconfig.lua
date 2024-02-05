@@ -25,6 +25,13 @@ return {
             local lspconfig = require("lspconfig")
             
             lspconfig.tsserver.setup({
+              vim.diagnostic.config({
+                virtual_text = true,
+                signs = true,
+                underline = true,
+                update_in_insert = false,
+                severity_sort = false,
+              }),
               capabilities = capabilities
             })
             lspconfig.html.setup({
