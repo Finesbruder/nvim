@@ -3,7 +3,7 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = "catppuccin",
+        theme = "auto",
         disabled_filetypes = { "packer", "neotree", "neo-tree" },
         globalstatus = true,
       },

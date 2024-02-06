@@ -68,7 +68,6 @@ vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>c", ":noh<CR>", {})
 -- Wünsche:
 -- diagnostics unter zeile und bessere markierung
--- git signs
--- terminal bessere integration
+--  am besten solle ich die multiline diags togglen können. Standartmaessig sollen squiggly lines kommen, außer für error, da die meldung drunter 
 -- formatter für typescript
 
