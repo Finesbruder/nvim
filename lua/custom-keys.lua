@@ -64,7 +64,8 @@ vim.keymap.set("n", "<leader>tl", function() require("trouble").open("loclist") 
 vim.keymap.set("n", "<leader>tr", function() require("trouble").open("lsp_references") end)
 
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
-
+vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>c", ":noh<CR>", {})
 -- Wünsche:
 -- diagnostics unter zeile und bessere markierung
 -- git signs
