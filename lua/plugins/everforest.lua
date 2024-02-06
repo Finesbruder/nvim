@@ -11,7 +11,8 @@ return {
         italics = true,
         disable_italic_comments = false,
         sign_column_background = "grey",
-        dim_inactive_windows = true,
+        float_style = "dim",
+        dim_inactive_windows = false,
         on_highlights = function(hl, _)
           hl["@symbol"] = { link = "@field" }
         end,
