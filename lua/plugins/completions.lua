@@ -13,6 +13,7 @@ return {
       "hrsh7th/nvim-cmp",
       config = function()
         local cmp = require("cmp")
+        local capabilities = require('cmp_nvim_lsp').default_capabilities() -- neu
         require("luasnip.loaders.from_vscode").lazy_load()
   
         cmp.setup({
@@ -38,6 +39,11 @@ return {
           }, {
             { name = "buffer" },
           }),
+
+          -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+          require('lspconfig')['tsserver'].setup { -- neu
+            capabilities = capabilities -- neu
+          },
         })
       end,
     },

@@ -20,17 +20,14 @@ vim.keymap.set("n", "<leader>d", ":bp<bar>sp<bar>bn<bar>bd<CR>", {});
 
 -- Code Insights
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
--- vim.keymap.set("n", "<leader>gd", "gd | :tabnew %<CR>", {}) funktioniert noch nicht ganz: öffnet nicht die definition
 vim.keymap.set("n", "<C-j>", vim.lsp.buf.hover, {})
 vim.keymap.set("i", "<C-j>", vim.lsp.buf.hover, {})
 
 -- LSP Bindings
-vim.keymap.set("n", "<leader>ra", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
 vim.keymap.set("n", '<leader>rn', vim.lsp.buf.rename, {}) -- Brauche noch global rename
-vim.keymap.set("n", '<leader>rr', vim.lsp.buf.references, {})
-vim.keymap.set("n", '<leader>rws', vim.lsp.buf.workspace_symbol, {}) -- ich weiß nicht was das macht lol
-vim.keymap.set("i", '<C-h>', vim.lsp.buf.signature_help, {}) -- ich weiß nicht was das macht lol
+vim.keymap.set("i", '<C-h>', vim.lsp.buf.signature_help, {}) 
 
 -- Save file
 vim.keymap.set('n', '<C-s>', ":w<CR>", {})
@@ -38,7 +35,7 @@ vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>", {})
 vim.keymap.set('n', '<leader><C-s>', ":saveas %:h\\", {})
 
 -- Refactoring
-vim.keymap.set("v", '<C-o>', ":sort<CR>", {}) -- Brauche noch global rename
+vim.keymap.set("v", '<C-o>', ":sort<CR>", {}) 
 vim.keymap.set("n", "<A-down>", ":move +1<CR>", {})
 vim.keymap.set("n", "<A-up>", ":move -2<CR>", {})
 vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
@@ -50,25 +47,26 @@ vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
     -- Brackets
 vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
--- vim.keymap.set("i", "(", "()<left>", {})
+vim.keymap.set("i", "(", "()<left>", {})
 vim.keymap.set("i", "[", "[]<left>", {})
 vim.keymap.set("i", "{<CR>", "{}<left><CR><up><ESC>$o", {})
 -- vim.keymap.set("i", "{<Space>", "{<space><space>}<left><left>", {})
 vim.keymap.set("i", "{;", "{};<left><left>", {})
 vim.keymap.set("i", "{", "{}<left>", {})
-vim.keymap.set("i", "/*", "/**/<left><left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
 
 
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end)
-vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").open("lsp_references") end)
+vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>tw", function() require("trouble").open("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>td", function() require("trouble").open("document_diagnostics") end)
+vim.keymap.set("n", "<leader>tq", function() require("trouble").open("quickfix") end)
+vim.keymap.set("n", "<leader>tl", function() require("trouble").open("loclist") end)
+vim.keymap.set("n", "<leader>tr", function() require("trouble").open("lsp_references") end)
 
 
 -- Wünsche:
--- gd in hover mit option auf öffnen
 -- diagnostics unter zeile und bessere markierung
+-- git signs
+-- terminal bessere integration
+-- formatter für typescript
 
