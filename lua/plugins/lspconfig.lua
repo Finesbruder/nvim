@@ -32,13 +32,12 @@ return {
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require("lspconfig")
-            
             lspconfig.tsserver.setup({
               vim.diagnostic.config({
                 virtual_text = false,
                 signs = true,
                 underline = true,
-                update_in_insert = false,
+                update_in_insert = true,
                 severity_sort = true,
               }),
               capabilities = capabilities
