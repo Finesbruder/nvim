@@ -11,11 +11,9 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 
 -- Hover:
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
-vim.keymap.set("i", "<C-h>", vim.lsp.buf.hover, {})
 
 -- Inspect:
 vim.keymap.set("n", "<leader>i", vim.lsp.signature_help, {})
-vim.keymap.set("i", '<C-i>', vim.lsp.buf.signature_help, {}) 
 
 -- Quickfixes:
 vim.keymap.set("n", "<leader>qa", vim.lsp.buf.code_action, {})
