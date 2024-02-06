@@ -63,6 +63,7 @@ vim.keymap.set("n", "<leader>tq", function() require("trouble").open("quickfix")
 vim.keymap.set("n", "<leader>tl", function() require("trouble").open("loclist") end)
 vim.keymap.set("n", "<leader>tr", function() require("trouble").open("lsp_references") end)
 
+vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 
 -- Wünsche:
 -- diagnostics unter zeile und bessere markierung
