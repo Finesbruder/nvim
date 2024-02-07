@@ -1,23 +1,38 @@
--- Change:
-vim.keymap.set("n", '<leader>cn', vim.lsp.buf.rename, {}) 
--- Finding:
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+local wk = require("which-key")
+wk.register({
+    c = {
+        name = "Change",
+        a = {vim.lsp.buf.code_action, "Code Action"},
+        n = {vim.lsp.buf.rename, "Name"},
+        f = {vim.lsp.buf.format, "Format file"},
+    },
+    e = {
+        name = "Errors",
+        f = {":TroubleToggle document_diagnostics<CR>", "File Errors"},
+        l = { function() require("lsp_lines").toggle() end, "Toggle LspLines"},
+        n = {":lua vim.diagnostic.goto_next()<CR>", "Next Error"},
+        o = {":TroubleToggle<CR>", "Toggle List of Errors"},
+        p = {":lua vim.diagnostic.goto_prev()<CR>", "Prev Error"},
+        q = {":TroubleToggle quickfix<CR>", "Quickfix items"},
+        s = {":lua vim.diagnostic.open_float()<CR>", "Show float over cursor"},
+        w = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
+    },
+    f = {
+        name = "Find",
+        b = { ":Telescope buffers<cr>", "Buffers" }, 
+        f = { ":Telescope find_files<cr>", "Find File" },
+        g = { ":Telescope live_grep<cr>", "Live Grep" }, 
+    },
+    i = {
+        name = "Inspect Code",
+        d = { vim.lsp.buf.hover, "hover Documentation" }, 
+        r = { function() require("trouble").toggle("lsp_references") end, "references" }, 
+        s = { vim.lsp.buf.signature_help, "hover Signature" },
+    },
+  }, { prefix = "<leader>" })
 
 -- Go:
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-
--- Hover:
-vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, {})
-
--- Inspect:
-vim.keymap.set("n", "<leader>i", vim.lsp.signature_help, {})
-
--- Quickfixes:
-vim.keymap.set("n", "<leader>qa", vim.lsp.buf.code_action, {})
-vim.keymap.set('n', '<leader>qf', vim.lsp.buf.format, {})
 
 -- Window Options
 vim.keymap.set("n", "<S-up>", ":resize +1<CR>", {})
@@ -31,11 +46,9 @@ vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
 vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
 vim.keymap.set("n", "<C-k>", "<C-w>w", {})
 vim.keymap.set("n", "<C-j>", "<C-w>W", {})
-vim.keymap.set("n", "<C-n>", ":Neotree filesystem toggle<CR>", {})
--- center cursor 
+vim.keymap.set("n", "<C-o>", ":Neotree filesystem toggle<CR>", {})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
-
 
 -- Save file
 vim.keymap.set('n', '<C-s>', ":w<CR>", {})
@@ -48,36 +61,21 @@ vim.keymap.set("n", "<A-down>", ":move +1<CR>", {})
 vim.keymap.set("n", "<A-up>", ":move -2<CR>", {})
 vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
 
-    -- Deletes selected text, moves to new window, pastes and saves in cwd 
--- vim.keymap.set("v", "<tab>", "d<bar>:vsplit<CR><bar>:e %:h\\tempfile.txt<CR><bar>p<bar>:saveas %:h\\", {})
-
 -- Code Hilfe 
-    -- Brackets
 vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
 vim.keymap.set("i", "(", "()<left>", {})
 vim.keymap.set("i", "[", "[]<left>", {})
 vim.keymap.set("i", "{<CR>", "{}<left><CR><up><ESC>$o", {})
--- vim.keymap.set("i", "{<Space>", "{<space><space>}<left><left>", {})
 vim.keymap.set("i", "{;", "{};<left><left>", {})
 vim.keymap.set("i", "{", "{}<left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
 
-
-vim.keymap.set("n", "<leader>tt", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>tw", function() require("trouble").open("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>td", function() require("trouble").open("document_diagnostics") end)
-vim.keymap.set("n", "<leader>tq", function() require("trouble").open("quickfix") end)
-vim.keymap.set("n", "<leader>tl", function() require("trouble").open("loclist") end)
-vim.keymap.set("n", "<leader>tr", function() require("trouble").open("lsp_references") end)
-
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>c", ":noh<CR>", {})
+vim.api.nvim_set_keymap("n", "<leader>rh", ":noh<CR>", {})
 
 
 -- Wünsche:
--- diagnostics unter zeile und bessere markierung
---  am besten solle ich die multiline diags togglen können. Standartmaessig sollen squiggly lines kommen, außer für error, da die meldung drunter 
 -- formatter für typescript
 
