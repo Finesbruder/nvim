@@ -17,7 +17,6 @@ return {
           hl["@symbol"] = { link = "@field" }
         end,
       })
-    vim.cmd.colorscheme("everforest")
+--    vim.cmd.colorscheme("everforest")
     end,
-
 }

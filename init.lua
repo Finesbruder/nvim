@@ -15,4 +15,5 @@ local opts =  {}
 
 require("custom-settings")
 require("lazy").setup("plugins")
+require("themes")
 require("custom-keys")

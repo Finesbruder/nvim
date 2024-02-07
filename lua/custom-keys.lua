@@ -6,34 +6,41 @@ wk.register({
         n = {vim.lsp.buf.rename, "Name"},
         f = {vim.lsp.buf.format, "Format file"},
     },
-    e = {
-        name = "Errors",
-        f = {":TroubleToggle document_diagnostics<CR>", "File Errors"},
-        l = { function() require("lsp_lines").toggle() end, "Toggle LspLines"},
-        n = {":lua vim.diagnostic.goto_next()<CR>", "Next Error"},
-        o = {":TroubleToggle<CR>", "Toggle List of Errors"},
-        p = {":lua vim.diagnostic.goto_prev()<CR>", "Prev Error"},
-        q = {":TroubleToggle quickfix<CR>", "Quickfix items"},
-        s = {":lua vim.diagnostic.open_float()<CR>", "Show float over cursor"},
-        w = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
-    },
     f = {
         name = "Find",
         b = { ":Telescope buffers<cr>", "Buffers" }, 
+        e = {":TroubleToggle document_diagnostics<CR>", "File Errors"},
+        E = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
         f = { ":Telescope find_files<cr>", "Find File" },
         g = { ":Telescope live_grep<cr>", "Live Grep" }, 
     },
     i = {
-        name = "Inspect Code",
-        d = { vim.lsp.buf.hover, "hover Documentation" }, 
-        r = { function() require("trouble").toggle("lsp_references") end, "references" }, 
-        s = { vim.lsp.buf.signature_help, "hover Signature" },
+        name = "Inspect",
+        d = { vim.lsp.buf.hover, "Documentation" }, 
+        e = {":lua vim.diagnostic.open_float()<CR>", "Error"},
+        r = { function() require("trouble").toggle("lsp_references") end, "References" }, 
+        s = { vim.lsp.buf.signature_help, "Signature" },
+    },
+    n = {
+        name = "Next",
+        e = {":lua vim.diagnostic.goto_next()<CR>", "Error"},
+    },
+    p = {
+        name = "Prev",
+        e = {":lua vim.diagnostic.goto_prev()<CR>", "Prev Error"},
+    },
+    s = {
+        name = "Show",
+        e = { function() require("lsp_lines").toggle() end, "Errors"},
+        q = {":TroubleToggle quickfix<CR>", "Quickfix items"},
     },
   }, { prefix = "<leader>" })
+wk.register({
+    -- ["<leader>a"] = { name = "test" },
+    ["gd"] =  { vim.lsp.buf.definition, "Lsp Definition" },   
+    ["<leader>rh"] =  { "<cmd>noh<CR>", "Remove highlights" },   
 
--- Go:
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-
+})
 -- Window Options
 vim.keymap.set("n", "<S-up>", ":resize +1<CR>", {})
 vim.keymap.set("n", "<S-down>", ":resize -1<CR>", {})
@@ -73,7 +80,6 @@ vim.keymap.set("n", "<CR>", "o<ESC>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>rh", ":noh<CR>", {})
 
 
 -- Wünsche:

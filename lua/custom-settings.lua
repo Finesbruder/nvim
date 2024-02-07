@@ -9,6 +9,7 @@ vim.opt.relativenumber = true
 vim.g.mapleader = " "
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
 vim.opt.showcmd = true
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
@@ -24,4 +25,3 @@ vim.diagnostic.config({
     update_in_insert = true,
     severity_sort = true,
 })
-
