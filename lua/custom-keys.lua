@@ -53,7 +53,7 @@ vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
 vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
 vim.keymap.set("n", "<C-k>", "<C-w>w", {})
 vim.keymap.set("n", "<C-j>", "<C-w>W", {})
-vim.keymap.set("n", "<C-o>", ":Neotree filesystem toggle<CR>", {})
+vim.keymap.set("n", "<C-p>", ":Neotree filesystem toggle<CR>", {})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
 
