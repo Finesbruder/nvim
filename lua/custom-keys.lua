@@ -78,6 +78,10 @@ vim.keymap.set("i", "{;", "{};<left><left>", {})
 vim.keymap.set("i", "{", "{}<left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
 
+-- Macro gedöns 
+vim.keymap.set("n", "Q", "@qj", {})
+vim.keymap.set("x", "Q", ":norm @q<CR>", {})
+
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
 
