@@ -13,12 +13,12 @@ wk.register({
         E = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
         f = { ":Telescope find_files<cr>", "Find File" },
         g = { ":Telescope live_grep<cr>", "Live Grep" }, 
+        R = { function() require("trouble").toggle("lsp_references") end, "References" }, 
     },
     i = {
         name = "Inspect",
         d = { vim.lsp.buf.hover, "Documentation" }, 
         e = {":lua vim.diagnostic.open_float()<CR>", "Error"},
-        r = { function() require("trouble").toggle("lsp_references") end, "References" }, 
         s = { vim.lsp.buf.signature_help, "Signature" },
     },
     n = {
@@ -51,8 +51,10 @@ vim.keymap.set("n", "<leader>d", ":bp<bar>sp<bar>bn<bar>bd<CR>", {});
 -- Navigation
 vim.keymap.set("n", "<tab>", ":bnext<CR>", {})
 vim.keymap.set("n", "<S-tab>", ":bprev<CR>", {})
-vim.keymap.set("n", "<C-k>", "<C-w>w", {})
-vim.keymap.set("n", "<C-j>", "<C-w>W", {})
+vim.keymap.set("n", "<C-up>", "<C-w>k", {})
+vim.keymap.set("n", "<C-down>", "<C-w>j", {})
+vim.keymap.set("n", "<C-left>", "<C-w>h", {})
+vim.keymap.set("n", "<C-j>", "<C-w>l", {})
 vim.keymap.set("n", "<C-p>", ":Neotree filesystem toggle<CR>", {})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
