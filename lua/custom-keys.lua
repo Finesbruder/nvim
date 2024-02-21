@@ -24,10 +24,14 @@ wk.register({
     n = {
         name = "Next",
         e = {":lua vim.diagnostic.goto_next()<CR>", "Error"},
+        l = {"<cmd>lnext<CR>zz", "Loclist item"},
+        q = {"<cmd>cnext<CR>zz", "Quickfix item"},
     },
     p = {
         name = "Prev",
-        e = {":lua vim.diagnostic.goto_prev()<CR>", "Prev Error"},
+        e = {":lua vim.diagnostic.goto_prev()<CR>", "Error"},
+        l = {"<cmd>lprev<CR>zz", "Loclist item"},
+        q = {"<cmd>cprev<CR>zz", "Quickfix item"},
     },
     s = {
         name = "Show",
