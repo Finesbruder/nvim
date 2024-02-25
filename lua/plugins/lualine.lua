@@ -9,15 +9,15 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
+        lualine_b = { "branch", "diff" },
         lualine_c = {},
 
         lualine_x = {},
-        lualine_y = { "filename" },
+        lualine_y = { "diagnostics" },
         lualine_z = { "location", "progress" },
       },
       tabline = {
-        lualine_a = { "tabs" },
+        lualine_a = { "buffers" },
       },
       inactive_winbar = {
         lualine_a = { "branch "},
