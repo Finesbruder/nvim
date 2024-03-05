@@ -5,6 +5,7 @@ return {
         require("toggleterm").setup{
             open_mapping = [[<c-t>]],
             direction = 'horizontal',
+            autochdir = true,
             float_opts = {
                 -- The border key is *almost* the same as 'nvim_open_win'
                 -- see :h nvim_open_win for details on borders however

@@ -5,28 +5,21 @@ return {
       options = {
         theme = "auto",
         disabled_filetypes = { "packer", "neotree", "neo-tree" },
-        globalstatus = true,
+        globalstatus = false,
       },
       sections = {
-        lualine_a = { "mode" },
+        lualine_a = { "filename" },
         lualine_b = { "branch", "diff" },
-        lualine_c = {},
+        lualine_c = { "diagnostics "},
 
         lualine_x = {},
-        lualine_y = { "diagnostics" },
-        lualine_z = { "location", "progress" },
+        lualine_y = { "location", "searchcount", "selectioncount" },
+        lualine_z = { "mode" },
       },
       tabline = {
-        lualine_a = { "buffers" },
+        lualine_a = { "windows" },
       },
-      inactive_winbar = {
-        lualine_a = { "branch "},
-        lualine_b = {},
-        lualine_c = {"filename"},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
-      }
+      inactive_winbar = { }
     })
   end,
 }
