@@ -62,6 +62,8 @@ vim.keymap.set("n", "<right>", "<C-w>l", {})
 vim.keymap.set("n", "<C-p>", ":Neotree filesystem toggle<CR>", {})
 vim.keymap.set("n", "<C-d>", "<C-d>zz", {})
 vim.keymap.set("n", "<C-u>", "<C-u>zz", {})
+vim.keymap.set("i", "<C-h>", "<left>", {})
+vim.keymap.set("i", "<C-l>", "<right>", {})
 
 -- Save file
 vim.keymap.set('n', '<C-s>', ":w<CR>", {})
@@ -70,8 +72,8 @@ vim.keymap.set('n', '<leader><C-s>', ":saveas %:h\\", {})
 
 -- Refactoring
 vim.keymap.set("v", '<C-o>', ":sort<CR>", {}) 
-vim.keymap.set("n", "<A-down>", ":move +1<CR>", {})
-vim.keymap.set("n", "<A-up>", ":move -2<CR>", {})
+vim.keymap.set("n", "<A-j>", ":move +1<CR>", {})
+vim.keymap.set("n", "<A-k>", ":move -2<CR>", {})
 vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
 
 -- Code Hilfe 
