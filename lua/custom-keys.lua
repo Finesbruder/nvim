@@ -8,12 +8,13 @@ wk.register({
     },
     f = {
         name = "Find",
-        b = { ":Telescope buffers<cr>", "Buffers" }, 
+        b = {":Telescope buffers<cr>", "Buffers" }, 
         e = {":TroubleToggle document_diagnostics<CR>", "File Errors"},
         E = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
-        f = { ":Telescope find_files<cr>", "Find File" },
-        g = { ":Telescope live_grep<cr>", "Live Grep" }, 
-        R = { function() require("trouble").toggle("lsp_references") end, "References" }, 
+        f = {":Telescope find_files<cr>", "Find File" },
+        g = {":Telescope live_grep<cr>", "Live Grep" }, 
+        R = {function() require("trouble").toggle("lsp_references") end, "References" }, 
+        s = {":Telescope lsp_document_symbols<cr>", "Symbols" }, 
     },
     i = {
         name = "Inspect",
