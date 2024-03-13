@@ -37,6 +37,14 @@ wk.register({
         name = "Show",
         e = { function() require("lsp_lines").toggle() end, "Errors"},
         q = {":TroubleToggle quickfix<CR>", "Quickfix items"},
+        t = {":tabs<CR>", "Open Tabs"},
+    },
+    t = {
+        name = "Tab",
+        d = {":tab vim.lsp.buf.definition<cr>", "Definition in neuem Tab" },
+        n = {":tabnew<CR>", "New Tab"},
+        o = {":tabo<CR>", "Close all other tabs"},
+        q = {":tabc<CR>", "Close current Tab"},
     },
   }, { prefix = "<leader>" })
 wk.register({
