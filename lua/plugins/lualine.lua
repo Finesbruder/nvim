@@ -8,16 +8,17 @@ return {
         globalstatus = false,
       },
       sections = {
-        lualine_a = { "filename" },
+        lualine_a = { "mode" },
         lualine_b = { "branch", "diff" },
         lualine_c = { "diagnostics "},
 
         lualine_x = {},
         lualine_y = { "location", "searchcount", "selectioncount" },
-        lualine_z = { "mode" },
+        lualine_z = { },
       },
       tabline = {
-        lualine_a = { "windows" },
+        lualine_a = {{ "filename", path = 1 }},
+        lualine_z = { "windows" },
       },
       inactive_winbar = { }
     })
