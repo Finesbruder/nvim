@@ -86,13 +86,8 @@ vim.keymap.set("n", "<A-k>", ":move -2<CR>", {})
 vim.keymap.set("v", "<leader>r", "\"hy:%s/<C-r>h//g<left><left>", {})
 
 -- Code Hilfe 
-vim.keymap.set("i", "'", "''<left>", {})
 vim.keymap.set("i", "\"", "\"\"<left>", {})
 vim.keymap.set("i", "(", "()<left>", {})
-vim.keymap.set("i", "[", "[]<left>", {})
-vim.keymap.set("i", "{<CR>", "{}<left><CR><up><ESC>$o", {})
-vim.keymap.set("i", "{;", "{};<left><left>", {})
-vim.keymap.set("i", "{", "{}<left>", {})
 vim.keymap.set("n", "<CR>", "o<ESC>", {})
 
 -- Macro gedöns 
