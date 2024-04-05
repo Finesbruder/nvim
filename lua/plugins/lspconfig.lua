@@ -18,15 +18,15 @@ return {
         --     })
         -- end
     },
-    -- {
-    --   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-    --   dependencies = {
-    --     "neovim/nvim-lspconfig",
-    --   },
-    --   config = function()
-    --     require("lsp_lines").setup()
-    --   end,
-    -- },
+    {
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+      dependencies = {
+        "neovim/nvim-lspconfig",
+      },
+      config = function()
+        require("lsp_lines").setup()
+      end,
+    },
     {
         "neovim/nvim-lspconfig",
         lazy = false;
