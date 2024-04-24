@@ -30,6 +30,9 @@ map("n", "<C-u>", "<C-u>zz", {})
 map("i", "<C-h>", "<left>", {})
 map("i", "<C-l>", "<right>", {})
 
+map("i", "jj", "<esc>", {})
+map("i", "jk", "<esc>", {})
+
 -- select all
 map("n", "<C-a>", "ggVG", opts)
 
