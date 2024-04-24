@@ -76,3 +76,5 @@ map("x", "Q", ":norm @q<CR>", {})
 
 vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<leader>zz", ":ZenMode<CR>", {})
+vim.api.nvim_set_keymap("n", "gd",  vim.lsp.buf.definition, {})
+vim.api.nvim_set_keymap("n", "gD",  vim.lsp.buf.declaration, {})

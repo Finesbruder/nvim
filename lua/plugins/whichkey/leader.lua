@@ -12,6 +12,7 @@ return {
         s = {":Telescope lsp_document_symbols<cr>", "Symbols" }, 
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
         H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
+        m = { "<cmd>Telescope marks<cr>", "Man Pages" },
         M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
         o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
         R = { "<cmd>Telescope registers<cr>", "Registers" },
@@ -38,6 +39,9 @@ return {
         name = "Prev",
         e = {":lua vim.diagnostic.goto_prev()<CR>", "Error"},
     },
+    r = {
+        h = {":noh<CR>", "remove Highlighting"},
+    }
     s = {
         name = "Show",
         e = { function() require("lsp_lines").toggle() end, "Errors"},
