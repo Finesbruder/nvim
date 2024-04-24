@@ -19,6 +19,11 @@ return {
         C = { "<cmd>Telescope commands<cr>", "Commands" },
         l = { "<cmd>Telescope resume<cr>", "Resume last search" },
     },
+    g = {
+        name = "goto",
+        d = { vim.lsp.buf.definition, "Definition" },
+        D = { vim.lsp.buf.declaration, "Declaration" },
+    },
     l = {
         name = "LSP",
         a = { vim.lsp.buf.code_action, "Code Action"},
@@ -41,7 +46,7 @@ return {
     },
     r = {
         h = {":noh<CR>", "remove Highlighting"},
-    }
+    },
     s = {
         name = "Show",
         e = { function() require("lsp_lines").toggle() end, "Errors"},
