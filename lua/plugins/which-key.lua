@@ -63,6 +63,7 @@ return {
   config = function(_, opts)
     local which_key = require("which-key")
     which_key.setup(opts)
+    which_key.register(require('plugins.whichkey.normal'))
     which_key.register(require('plugins.whichkey.leader'), {
       mode = "n",
       prefix = "<leader>",
