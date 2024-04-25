@@ -8,7 +8,6 @@ return {
         E = {":TroubleToggle workspace_diagnostics<CR>", "Project Errors"},
         f = {":Telescope find_files<cr>", "Find File" },
         g = {":Telescope live_grep<cr>", "Live Grep" }, 
-        R = {function() require("trouble").toggle("lsp_references") end, "References" }, 
         s = {":Telescope lsp_document_symbols<cr>", "Symbols" }, 
         h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
         H = { "<cmd>Telescope highlights<cr>", "Find highlight groups" },
@@ -17,12 +16,9 @@ return {
         o = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
         R = { "<cmd>Telescope registers<cr>", "Registers" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
-        l = { "<cmd>Telescope resume<cr>", "Resume last search" },
-    },
-    g = {
-        name = "goto",
-        d = { vim.lsp.buf.definition, "Definition" },
-        D = { vim.lsp.buf.declaration, "Declaration" },
+        r = { "<cmd>Telescope resume<cr>", "Resume last search" },
+        l = { "<cmd>Telescope loclist<cr>", "loclist" },
+        q = { "<cmd>Telescope quickfix<cr>", "quickfix" },
     },
     l = {
         name = "LSP",
