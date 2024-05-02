@@ -67,7 +67,7 @@ map("i", "(", "()<left>", {})
 map('n', '<CR>', function()
     if vim.o.buftype == 'quickfix' then
       return "<CR>:cclose<CR>"
-    if vim.o.buftype == 'loclist' then
+    elseif vim.o.buftype == 'loclist' then
        return "<CR>:lclose<CR>"
     else
       return "o<ESC>"

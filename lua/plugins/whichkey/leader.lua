@@ -42,6 +42,7 @@ return {
     },
     r = {
         h = {":noh<CR>", "remove Highlighting"},
+        b = {function() require('refactoring').select_refactor() end, "Refactor" }, 
     },
     s = {
         name = "Show",
